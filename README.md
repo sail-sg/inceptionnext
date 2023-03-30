@@ -38,29 +38,29 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 
 ## Models
 ### InceptionNeXt trained on ImageNet-1K
-| Model | Resolution | Params | MACs | Train throughput | Infer. throughput | Top1 Acc | Download |
-| :---     |   :---:    |  :---: |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| resnet50 | 224 | 26M | 4.1G | 969 | 3149 | 78.4 | - |
-| convnext_tiny | 224 | 29M | 4.5G | 575 | 2413 | 82.1 | - |
-| inceptionnext_tiny | 224 | 28M | 4.2G | 901 | 2900 | 82.3 | [here]() |
-| inceptionnext_small | 224 | 49M | 8.4G | 521 | 1750 | 83.5 | [here]() |
-| inceptionnext_base | 224 | 87M | 14.9G | 375 | 1244 |  84.0 | [here]() |
-| inceptionnext_base_384 | 384 | 87M | 43.6G | 139 | 428 | 85.2 | [here]() |
+| Model | Resolution | Params | MACs | Train throughput | Infer. throughput | Top1 Acc |
+| :---     |   :---:    |  :---: |  :---:  |  :---:  |  :---:  |  :---:  |
+| resnet50 | 224 | 26M | 4.1G | 969 | 3149 | 78.4 |
+| convnext_tiny | 224 | 29M | 4.5G | 575 | 2413 | 82.1 |
+| [inceptionnext_tiny](https://github.com/sail-sg/inceptionnext/releases/download/model/inceptionnext_tiny.pth) | 224 | 28M | 4.2G | 901 | 2900 | 82.3 |
+| [inceptionnext_small](https://github.com/sail-sg/inceptionnext/releases/download/model/inceptionnext_small.pth) | 224 | 49M | 8.4G | 521 | 1750 | 83.5 |
+| [inceptionnext_base](https://github.com/sail-sg/inceptionnext/releases/download/model/inceptionnext_base.pth) | 224 | 87M | 14.9G | 375 | 1244 |  84.0 |
+| [inceptionnext_base_384](https://github.com/sail-sg/inceptionnext/releases/download/model/inceptionnext_base_384.pth) | 384 | 87M | 43.6G | 139 | 428 | 85.2 |
 
 ### ConvNeXt variants trained on ImageNet-1K
-| Model | Resolution | Params | MACs | Train throughput | Infer. throughput | Top1 Acc | Download |
-| :---     |   :---:    |  :---: |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| Model | Resolution | Params | MACs | Train throughput | Infer. throughput | Top1 Acc |
+| :---     |   :---:    |  :---: |  :---:  |  :---:  |  :---:  |  :---:  |
 | resnet50 | 224 | 26M | 4.1G | 969 | 3149 | 78.4 | - |
 | convnext_tiny | 224 | 29M | 4.5G | 575 | 2413 | 82.1 | - |
-| convnext_tiny_k5 | 224 | 29M | 4.4G | 675 | 2704 | 82.0 | [here]() |
-| convnext_tiny_k3 | 224 | 28M | 4.4G | 798 | 2802 | 81.5 | [here]() |
-| convnext_tiny_k3_par1_2 | 224 | 28M | 4.4G |  818 | 2740 | 81.4 | [here]() |
-| convnext_tiny_k3_par3_8 | 224 | 28M | 4.4G |  847 | 2762 | 81.4 | [here]() |
-| convnext_tiny_k3_par1_4 | 224 | 28M | 4.4G | 871 | 2808 | 81.3 | [here]() |
-| convnext_tiny_k3_par1_8 | 224 | 28M | 4.4G | 901 | 2833 | 80.8 | [here]() |
-| convnext_tiny_k3_par1_16 | 224 | 28M | 4.4G | 916 | 2846 | 80.1 | [here]() |
+| [convnext_tiny_k5](https://github.com/sail-sg/inceptionnext/releases/download/model/convnext_tiny_k5.pth) | 224 | 29M | 4.4G | 675 | 2704 | 82.0 |
+| [convnext_tiny_k3](https://github.com/sail-sg/inceptionnext/releases/download/model/convnext_tiny_k3.pth) | 224 | 28M | 4.4G | 798 | 2802 | 81.5 |
+| [convnext_tiny_k3_par1_2](https://github.com/sail-sg/inceptionnext/releases/download/model/convnext_tiny_k3_par1_2.pth) | 224 | 28M | 4.4G |  818 | 2740 | 81.4 |
+| [convnext_tiny_k3_par3_8](https://github.com/sail-sg/inceptionnext/releases/download/model/convnext_tiny_k3_par3_8.pth) | 224 | 28M | 4.4G |  847 | 2762 | 81.4 |
+| [convnext_tiny_k3_par1_4](https://github.com/sail-sg/inceptionnext/releases/download/model/convnext_tiny_k3_par1_4.pth) | 224 | 28M | 4.4G | 871 | 2808 | 81.3 |
+| [convnext_tiny_k3_par1_8](https://github.com/sail-sg/inceptionnext/releases/download/model/convnext_tiny_k3_par1_8.pth) | 224 | 28M | 4.4G | 901 | 2833 | 80.8 |
+| [convnext_tiny_k3_par1_16](https://github.com/sail-sg/inceptionnext/releases/download/model/convnext_tiny_k3_par1_16.pth) | 224 | 28M | 4.4G | 916 | 2846 | 80.1 |
 
-The throughputs are measured on an A100 with full precisioni and batch size of 128. See [Benchmarking throughput](#benchmarking-throughput)
+The throughputs are measured on an A100 with full precisioni and batch size of 128. See [Benchmarking throughput](#benchmarking-throughput).
 
 #### Usage
 We also provide a Colab notebook which run the steps to perform inference with MetaFormer baselines: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-CAPm6FNKYRbe_lAPxIBxsIH4xowgfg8?usp=sharing)
