@@ -7,7 +7,7 @@
     <img src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
 </p>
 
-This is a PyTorch implementation of InceptionNeXt proposed by our paper "[InceptionNeXt: When Inception Meets ConvNeXt](https://arxiv.org/abs/2203.16900)".
+This is a PyTorch implementation of InceptionNeXt proposed by our paper "[InceptionNeXt: When Inception Meets ConvNeXt](https://arxiv.org/abs/2303.16900)".
 
 ![InceptionNeXt](https://user-images.githubusercontent.com/15921929/228630174-1d31ac66-174b-4014-9f6a-b7e6d46af958.jpeg)
 **TLDR**: To speed up ConvNeXt, we build InceptionNeXt by decomposing the large kernel dpethweise convolution with Inception style. **Our InceptionNeXt-T enjoys both ResNet-50’s speed and ConvNeXt-T’s accuracy.**
