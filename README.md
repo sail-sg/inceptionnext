@@ -1,20 +1,20 @@
-# [InceptionNeXt: When Inception Meets ConvNeXt](https://arxiv.org/abs/2303.xxxxx)
+# [InceptionNeXt: When Inception Meets ConvNeXt](https://arxiv.org/abs/2303.16900)
 
 <p align="left">
-<a href="https://arxiv.org/abs/2303.xxxxx" alt="arXiv">
-    <img src="https://img.shields.io/badge/arXiv-2203.xxxxx-b31b1b.svg?style=flat" /></a>
-<a href="https://colab.research.google.com/github/sail-sg/metaformer/blob/main/misc/demo_inceptionnext.ipynb" alt="Colab">
+<a href="https://arxiv.org/abs/2303.16900" alt="arXiv">
+    <img src="https://img.shields.io/badge/arXiv-2203.16900-b31b1b.svg?style=flat" /></a>
+<a href="https://colab.research.google.com/drive/1-CAPm6FNKYRbe_lAPxIBxsIH4xowgfg8?usp=sharing" alt="Colab">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
 </p>
 
-This is a PyTorch implementation of InceptionNeXt proposed by our paper "[InceptionNeXt: When Inception Meets ConvNeXt](https://arxiv.org/abs/2203.xxxxx)".
+This is a PyTorch implementation of InceptionNeXt proposed by our paper "[InceptionNeXt: When Inception Meets ConvNeXt](https://arxiv.org/abs/2203.16900)".
 
 ![InceptionNeXt](https://user-images.githubusercontent.com/15921929/228630174-1d31ac66-174b-4014-9f6a-b7e6d46af958.jpeg)
-TLDR: To speed up ConvNeXt, we build InceptionNeXt by decomposing the large kernel dpethweise convolution with Inception style. Our InceptionNeXt-T enjoys both ResNet-50’s speed and ConvNeXt-T’s accuracy.
+**TLDR**: To speed up ConvNeXt, we build InceptionNeXt by decomposing the large kernel dpethweise convolution with Inception style. **Our InceptionNeXt-T enjoys both ResNet-50’s speed and ConvNeXt-T’s accuracy.**
 
 
 ## Requirements
-Our models are trained and tested in the environment of PyTorch 1.13, NVIDIA CUDA 11.7.1 and timm 0.6.11. If you use docker, check [Dockerfile](docker/Dockerfile) that we used.
+Our models are trained and tested in the environment of PyTorch 1.13, NVIDIA CUDA 11.7.1 and timm 0.6.11 (`pip install timm==0.6.11`). If you use docker, check [Dockerfile](docker/Dockerfile) that we used.
 
 
 Data preparation: ImageNet with the following folder structure, you can extract ImageNet by this [script](https://gist.github.com/BIGBALLON/8a71d225eff18d88e469e6ea9b39cef4).
@@ -63,7 +63,7 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 The throughputs are measured on an A100 with full precisioni and batch size of 128. See [Benchmarking throughput](#benchmarking-throughput)
 
 #### Usage
-We also provide a Colab notebook which run the steps to perform inference with MetaFormer baselines: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sail-sg/metaformer/blob/main/misc/demo__inceptionnext.ipynb)
+We also provide a Colab notebook which run the steps to perform inference with MetaFormer baselines: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-CAPm6FNKYRbe_lAPxIBxsIH4xowgfg8?usp=sharing)
 
 
 ## Validation
@@ -123,7 +123,7 @@ Training (fine-tuning) scripts of other models are shown in [scripts](/scripts/)
 @article{yu2023inceptionnext,
   title={InceptionNeXt: when inception meets convnext},
   author={Yu, Weihao and Zhou, Pan and Yan, Shuicheng and Wang, Xinchao},
-  journal={arXiv preprint arXiv:2303.xxxxx},
+  journal={arXiv preprint arXiv:2303.16900},
   year={2023}
 }
 ```
