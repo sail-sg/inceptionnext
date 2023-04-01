@@ -77,7 +77,7 @@ python3 validate.py /path/to/imagenet  --model $MODEL -b 128 \
 ```
 
 ## Benchmarking throughput
-On the environment described above, We benchmark throughputs on an A100 with batch size of 128. The beter results of "Channel First" and "Channel Last" memory layouts are reported.
+On the environment described above, we benchmark throughputs on an A100 with batch size of 128. The beter results of "Channel First" and "Channel Last" memory layouts are reported.
 
 For Channel First:
 ```bash

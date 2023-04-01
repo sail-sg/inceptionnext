@@ -30,7 +30,7 @@ class PartialConv2d(nn.Module):
         super().__init__()
         in_chs = int(in_channels * conv_ratio)
         out_chs = int(out_channels * conv_ratio)
-        gps = int(groups * conv_ratio)
+        gps = int(groups * conv_ratio) or 1 # groups should be at least 1
         self.conv = nn.Conv2d(in_chs, out_chs, 
                               kernel_size=kernel_size,
                               stride=stride, padding=padding, dilation=dilation, 
