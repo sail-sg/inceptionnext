@@ -63,7 +63,7 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 The throughputs are measured on an A100 with full precisioni and batch size of 128. See [Benchmarking throughput](#benchmarking-throughput).
 
 #### Usage
-We also provide a Colab notebook which run the steps to perform inference with ConvNeXt: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-CAPm6FNKYRbe_lAPxIBxsIH4xowgfg8?usp=sharing)
+We also provide a Colab notebook which run the steps to perform inference with InceptionNeXt: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-CAPm6FNKYRbe_lAPxIBxsIH4xowgfg8?usp=sharing)
 
 
 ## Validation
