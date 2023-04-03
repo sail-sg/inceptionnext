@@ -1,5 +1,7 @@
 """
-InceptionNeXt implementation
+InceptionNeXt implementation, paper: https://arxiv.org/abs/2303.16900
+
+Some code is borrowed from timm: https://github.com/huggingface/pytorch-image-models
 """
 
 from functools import partial
@@ -288,7 +290,6 @@ def _cfg(url='', **kwargs):
 
 
 default_cfgs = dict(
-    # timm specific variants
     inceptionnext_tiny=_cfg(
         url='https://github.com/sail-sg/inceptionnext/releases/download/model/inceptionnext_tiny.pth',
     ),
@@ -349,7 +350,6 @@ def inceptionnext_base_384(pretrained=False, **kwargs):
     model = MetaNeXt(depths=[3, 3, 27, 3], dims=[128, 256, 512, 1024], 
                       mlp_ratios=[4, 4, 4, 3],
                       token_mixers=InceptionDWConv2d,
-                      head_fn=MlpHead,
                       **kwargs
     )
     model.default_cfg = default_cfgs['inceptionnext_base_384']
