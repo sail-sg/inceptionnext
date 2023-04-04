@@ -61,7 +61,8 @@ from timm.scheduler import create_scheduler
 # from timm.utils import ApexScaler, NativeScaler
 from utils import ApexScalerAccum as ApexScaler
 from utils import NativeScalerAccum as NativeScaler
-import metaformer_baselines
+
+import models
 
 try:
     from apex import amp
