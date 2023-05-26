@@ -97,7 +97,7 @@ class MetaNeXtBlock(nn.Module):
     def __init__(
             self,
             dim,
-            token_mixer=InceptionDWConv2d,
+            token_mixer=nn.Identity,
             norm_layer=nn.BatchNorm2d,
             mlp_layer=ConvMlp,
             mlp_ratio=4,
@@ -133,6 +133,7 @@ class MetaNeXtStage(nn.Module):
             depth=2,
             drop_path_rates=None,
             ls_init_value=1.0,
+            token_mixer=nn.Identity,
             act_layer=nn.GELU,
             norm_layer=None,
             mlp_ratio=4,
@@ -154,6 +155,7 @@ class MetaNeXtStage(nn.Module):
                 dim=out_chs,
                 drop_path=drop_path_rates[i],
                 ls_init_value=ls_init_value,
+                token_mixer=token_mixer,
                 act_layer=act_layer,
                 norm_layer=norm_layer,
                 mlp_ratio=mlp_ratio,
@@ -236,6 +238,7 @@ class MetaNeXt(nn.Module):
                 drop_path_rates=dp_rates[i],
                 ls_init_value=ls_init_value,
                 act_layer=act_layer,
+                token_mixer=token_mixers[i],
                 norm_layer=norm_layer,
                 mlp_ratio=mlp_ratios[i],
             ))
