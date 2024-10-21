@@ -10,7 +10,7 @@
 This is a PyTorch implementation of InceptionNeXt proposed by our paper "[InceptionNeXt: When Inception Meets ConvNeXt](https://arxiv.org/abs/2303.16900)". Many thanks to [Ross Wightman](https://github.com/rwightman), InceptionNeXt is integrated into [timm](https://github.com/huggingface/pytorch-image-models).
 
 ![InceptionNeXt](https://user-images.githubusercontent.com/15921929/228630174-1d31ac66-174b-4014-9f6a-b7e6d46af958.jpeg)
-**TLDR**: To speed up ConvNeXt, we build InceptionNeXt by decomposing the large kernel dpethweise convolution with Inception style. **Our InceptionNeXt-T enjoys both ResNet-50’s speed and ConvNeXt-T’s accuracy.**
+**TLDR**: To speed up ConvNeXt, we build InceptionNeXt by decomposing the large kernel depthwise convolution with Inception style. **Our InceptionNeXt-T enjoys both ResNet-50’s speed and ConvNeXt-T’s accuracy.**
 
 
 ## Requirements
@@ -60,7 +60,7 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 | [convnext_tiny_k3_par1_8](https://github.com/sail-sg/inceptionnext/releases/download/model/convnext_tiny_k3_par1_8.pth) | 224 | 28M | 4.4G | 901 | 2833 | 80.8 |
 | [convnext_tiny_k3_par1_16](https://github.com/sail-sg/inceptionnext/releases/download/model/convnext_tiny_k3_par1_16.pth) | 224 | 28M | 4.4G | 916 | 2846 | 80.1 |
 
-The throughputs are measured on an A100 with full precisioni and batch size of 128. See [Benchmarking throughput](#benchmarking-throughput).
+The throughputs are measured on an A100 with full precision and batch size of 128. See [Benchmarking throughput](#benchmarking-throughput).
 
 #### Usage
 We also provide a Colab notebook which run the steps to perform inference with InceptionNeXt: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-CAPm6FNKYRbe_lAPxIBxsIH4xowgfg8?usp=sharing)
@@ -77,7 +77,7 @@ python3 validate.py /path/to/imagenet  --model $MODEL -b 128 \
 ```
 
 ## Benchmarking throughput
-On the environment described above, we benchmark throughputs on an A100 with batch size of 128. The beter results of "Channel First" and "Channel Last" memory layouts are reported.
+On the environment described above, we benchmark throughputs on an A100 with batch size of 128. The better results of "Channel First" and "Channel Last" memory layouts are reported.
 
 For Channel First:
 ```bash
@@ -118,7 +118,7 @@ cd $CODE_PATH && sh distributed_train.sh $NUM_GPU $DATA_PATH \
 Training (fine-tuning) scripts of other models are shown in [scripts](/scripts/).
 
 
-## Bibtex
+## BibTeX
 ```
 @article{yu2023inceptionnext,
   title={InceptionNeXt: when inception meets convnext},
