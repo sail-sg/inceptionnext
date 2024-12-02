@@ -1,4 +1,4 @@
-# [InceptionNeXt: When Inception Meets ConvNeXt](https://arxiv.org/abs/2303.16900)
+# [InceptionNeXt: When Inception Meets ConvNeXt](https://arxiv.org/abs/2303.16900) (CVPR 2024)
 
 <p align="left">
 <a href="https://arxiv.org/abs/2303.16900" alt="arXiv">
@@ -125,11 +125,12 @@ Training (fine-tuning) scripts of other models are shown in [scripts](/scripts/)
 
 ## Bibtex
 ```
-@article{yu2023inceptionnext,
-  title={InceptionNeXt: when inception meets convnext},
+@inproceedings{yu2024inceptionnext,
+  title={Inceptionnext: When inception meets convnext},
   author={Yu, Weihao and Zhou, Pan and Yan, Shuicheng and Wang, Xinchao},
-  journal={arXiv preprint arXiv:2303.16900},
-  year={2023}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={5672--5683},
+  year={2024}
 }
 ```
 
