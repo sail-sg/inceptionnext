@@ -40,6 +40,11 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 ### InceptionNeXt trained on ImageNet-1K
 | Model | Resolution | Params | MACs | Train throughput | Infer. throughput | Top1 Acc |
 | :---     |   :---:    |  :---: |  :---:  |  :---:  |  :---:  |  :---:  |
+| mobilenetv2_140 | 224 | 6.1M | 0.60G | 1001 | 5190 | 74.7 |
+| efficientnet_b0 | 224 | 5.3M | 0.40G | 954 | 5502 | 77.1 |
+| ghostnet_130 | 224 | 7.3M | 0.24G | 946 | 7451 | 75.7 |
+| convnext_atto | 224 | 3.7M | 0.55G | 835 | 4539 | 75.7 | 
+| [inceptionnext_atto](https://github.com/sail-sg/inceptionnext/releases/download/model/inceptionnext_atto.pth) | 224 | 4.2M | 0.51G | 2661 | 9876 | 75.3 |
 | resnet50 | 224 | 26M | 4.1G | 969 | 3149 | 78.4 |
 | convnext_tiny | 224 | 29M | 4.5G | 575 | 2413 | 82.1 |
 | [inceptionnext_tiny](https://github.com/sail-sg/inceptionnext/releases/download/model/inceptionnext_tiny.pth) | 224 | 28M | 4.2G | 901 | 2900 | 82.3 |

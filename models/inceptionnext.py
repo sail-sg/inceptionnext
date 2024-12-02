@@ -293,6 +293,9 @@ def _cfg(url='', **kwargs):
 
 
 default_cfgs = dict(
+    inceptionnext_atto=_cfg(
+        url='https://github.com/sail-sg/inceptionnext/releases/download/model/inceptionnext_atto.pth',
+    ),
     inceptionnext_tiny=_cfg(
         url='https://github.com/sail-sg/inceptionnext/releases/download/model/inceptionnext_tiny.pth',
     ),
@@ -308,6 +311,18 @@ default_cfgs = dict(
     ),
 )
 
+@register_model
+def inceptionnext_atto(pretrained=False, **kwargs):
+    model = MetaNeXt(depths=(2, 2, 6, 2), dims=(40, 80, 160, 320),
+                      token_mixers=partial(InceptionDWConv2d, band_kernel_size=9, branch_ratio=0.25),
+                      **kwargs
+    )
+    model.default_cfg = default_cfgs['inceptionnext_atto']
+    if pretrained:
+        state_dict = torch.hub.load_state_dict_from_url(
+            url=model.default_cfg['url'], map_location="cpu", check_hash=True)
+        model.load_state_dict(state_dict)
+    return model
 
 @register_model
 def inceptionnext_tiny(pretrained=False, **kwargs):
